@@ -48,10 +48,10 @@ state: A parameter to save the state, the possible behaviour of the robot;
 
 # •	The behaviour of the robot and how to make that
 This package implements four possible behaviour of the robot, in a sort of state machine. Through the interface, the user can select:
-### 1.	Give a random position to the robot to reach
-### 2.	Choose one out the six positions proposed to reach
-### 3.	Command the robot to follow external wall
-### 4.	Stop the robot right where it is and restart from the choice menu
+#### 1.	Give a random position to the robot to reach
+#### 2.	Choose one out the six positions proposed to reach
+#### 3.	Command the robot to follow external wall
+#### 4.	Stop the robot right where it is and restart from the choice menu
 To implement the first point, we have used the randsix_pos_server, a service to choose a random number, among 1 and 6, corresponding to one of the six saved position. When we extract a position, we save it in the param service, in this way the next node, can get them from it, then we publish a goal in the topic move base, with the desired position x and y.
 To implement the second point, we have used the coordinates saved in the param server, using that, the main program gets the desired x and y and publishes them to the move_base topic.
 To implement the third point, we have used the service wall_follower_service, it, thanks to the topic scan, can detect the walls and, publishing to the cmd_vel, it can allow the robot to follow walls. During this step the user can choose to stop robot and return to the menu, any time.
