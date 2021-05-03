@@ -19,7 +19,7 @@ roslaunch final_assignment.launch
 ```
 # •	Graph of the system:
 
-
+![rosgraph](https://user-images.githubusercontent.com/80365922/116873171-82959b00-ac17-11eb-829c-9eb3954f70f0.png)
 
 
 # •	Description of the content of the package:
