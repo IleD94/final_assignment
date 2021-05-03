@@ -27,17 +27,17 @@ roslaunch final_assignment.launch
 The package is composed of 4 nodes, 3 launch files and a folder “world” containing everything necessary to build the environment where our robot moves.
 It uses the ros package slam_gmapping and move_base to have an accurate algorithm for localizing and for the path planning of the mobile robot in an unknown enviroment. 
 The main node is called “main.py”. It publishes and subscribes to several topic and calls several useful services, in order to control the robot’s behaviour. It is a:
- # o	Publisher for:
-move_base:  using the action MoveBaseActionGoal, in order to give a goal to the robot and, in case, cancel it before the end of the execution and hence stop the robot where it is;
-cmd_vel: in order to control linear and angular velocity of the robot;
- # o	Subscriber for:
+ ## o	Publisher for:
+### move_base:  using the action MoveBaseActionGoal, in order to give a goal to the robot and, in case, cancel it before the end of the execution and hence stop the robot where it is;
+### cmd_vel: in order to control linear and angular velocity of the robot;
+ ## o	Subscriber for:
 odom: it is used to know the current position of the robot;
- # o	Services:
+ ## o	Services:
 user_selection: It is the user interface, through that the user can choose one of the four possible behaviours of the robot;
 wall_follower_switch: this service allows the robot to follow the external walls of the map;
 randsix_pos_server: it is used to extract a random number from 1 to 6, for selecting randomly one of the possible positions on the map
 
- # o	Parameters:
+ ## o	Parameters:
 des_pos_x: A parameter to save the x coordinate of our goal;
 des_pos_y: A parameter to save the y coordinate of our goal;
 state: A parameter to save the state, the possible behaviour of the robot;
