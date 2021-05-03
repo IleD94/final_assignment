@@ -6,17 +6,17 @@ Ilenia D’Angelo 4404721
 
 In order to run the code, follow those steps:
 1.	Launch in the terminal the file simulation_mapping.launch with the command: 
----
+```
 roslaunch final_assignment simulation_gmapping.launch
-
+```
 2.	Using another terminal, launch the file move_base.launch with the command: 
----
+```
 roslaunch final_assignment move_base.launch
-
+```
 3.	Open a third terminal and launch the file final.launch with the command:
---- 
+``` 
 roslaunch final_assignment.launch
-
+```
 # •	Graph of the system:
 
 
